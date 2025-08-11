@@ -4,17 +4,17 @@ const initialState = {
   firstname: '',
   lastname: '',
   email: '',
-  contact: ''
+  contact: '',
 };
 
 const formSlice = createSlice({
   name: 'form',
   initialState,
   reducers: {
-    updateFirstName: (state, action) => {
+    updateFirstname: (state, action) => {
       state.firstname = action.payload;
     },
-    updateLastName: (state, action) => {
+    updateLastname: (state, action) => {
       state.lastname = action.payload;
     },
     updateEmail: (state, action) => {
@@ -23,14 +23,14 @@ const formSlice = createSlice({
     updateContact: (state, action) => {
       state.contact = action.payload;
     },
-    resetForm: (state) => {
-      state.firstname = '';
-      state.lastname = '';
-      state.email = '';
-      state.contact = '';
-    }
-  }
+  },
 });
 
-export const { updateFirstName, updateLastName, updateEmail, updateContact, resetForm } = formSlice.actions;
+export const {
+  updateFirstname,
+  updateLastname,
+  updateEmail,
+  updateContact,
+} = formSlice.actions;
+
 export default formSlice.reducer;
