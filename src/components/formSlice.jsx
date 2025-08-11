@@ -22,9 +22,15 @@ const formSlice = createSlice({
     },
     updateContact: (state, action) => {
       state.contact = action.payload;
+    },
+    resetForm: (state) => {
+      state.firstname = '';
+      state.lastname = '';
+      state.email = '';
+      state.contact = '';
     }
   }
 });
 
-export const { updateFirstName, updateLastName, updateEmail, updateContact } = formSlice.actions;
+export const { updateFirstName, updateLastName, updateEmail, updateContact, resetForm } = formSlice.actions;
 export default formSlice.reducer;
